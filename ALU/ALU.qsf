@@ -1,0 +1,125 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 14:19:10  November 21, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		ALU_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY GPP
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:19:10  NOVEMBER 21, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name VHDL_FILE latch1.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VECTOR_WAVEFORM_FILE latch1.vwf
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name VHDL_FILE moore10circuit.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE moore10circuit.vwf
+set_global_assignment -name VHDL_FILE ssegStudentId.vhd
+set_global_assignment -name VHDL_FILE dec3to8.vhd
+set_global_assignment -name BDF_FILE modifieddec4to16.bdf
+set_global_assignment -name BDF_FILE "test bloc.bdf"
+set_global_assignment -name VECTOR_WAVEFORM_FILE dec3to8.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE modifieddec4to16.vwf
+set_global_assignment -name VHDL_FILE ALU.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE ALU.vwf
+set_global_assignment -name BDF_FILE GPP.bdf
+set_global_assignment -name VHDL_FILE hexasseg.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE hexasseg.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ssegStudentId.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE GPP.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "/home/student1/n48rahma/Downloads/Lab 6 /ALU/GPP.vwf"
+set_location_assignment PIN_N1 -to A[0]
+set_location_assignment PIN_P1 -to A[1]
+set_location_assignment PIN_P2 -to A[2]
+set_location_assignment PIN_T7 -to A[3]
+set_location_assignment PIN_U3 -to A[4]
+set_location_assignment PIN_U4 -to A[5]
+set_location_assignment PIN_V1 -to A[6]
+set_location_assignment PIN_V2 -to A[7]
+set_location_assignment PIN_P25 -to B[0]
+set_location_assignment PIN_AE14 -to B[1]
+set_location_assignment PIN_AF14 -to B[2]
+set_location_assignment PIN_AD13 -to B[3]
+set_location_assignment PIN_AC13 -to B[4]
+set_location_assignment PIN_C13 -to B[5]
+set_location_assignment PIN_B13 -to B[6]
+set_location_assignment PIN_A13 -to B[7]
+set_location_assignment PIN_W26 -to Clock
+set_location_assignment PIN_N25 -to data_in
+set_location_assignment PIN_V21 -to R1[1]
+set_location_assignment PIN_W21 -to R1[2]
+set_location_assignment PIN_Y22 -to R1[3]
+set_location_assignment PIN_AA24 -to R1[4]
+set_location_assignment PIN_AA23 -to R1[5]
+set_location_assignment PIN_AB24 -to R1[6]
+set_location_assignment PIN_AB23 -to R2[0]
+set_location_assignment PIN_V22 -to R2[1]
+set_location_assignment PIN_AC25 -to R2[2]
+set_location_assignment PIN_AC26 -to R2[3]
+set_location_assignment PIN_AB26 -to R2[4]
+set_location_assignment PIN_AB25 -to R2[5]
+set_location_assignment PIN_Y24 -to R2[6]
+set_location_assignment PIN_Y23 -to SignLED[0]
+set_location_assignment PIN_AA25 -to SignLED[1]
+set_location_assignment PIN_AA26 -to SignLED[2]
+set_location_assignment PIN_Y26 -to SignLED[3]
+set_location_assignment PIN_Y25 -to SignLED[4]
+set_location_assignment PIN_U22 -to SignLED[5]
+set_location_assignment PIN_W24 -to SignLED[6]
+set_location_assignment PIN_AF10 -to StudentIdLed[0]
+set_location_assignment PIN_AB12 -to StudentIdLed[1]
+set_location_assignment PIN_AC12 -to StudentIdLed[2]
+set_location_assignment PIN_AD11 -to StudentIdLed[3]
+set_location_assignment PIN_AE11 -to StudentIdLed[4]
+set_location_assignment PIN_V14 -to StudentIdLed[5]
+set_location_assignment PIN_V13 -to StudentIdLed[6]
+set_location_assignment PIN_V20 -to R1[0]
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_N26 -to reset
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

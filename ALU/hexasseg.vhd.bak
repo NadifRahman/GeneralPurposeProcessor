@@ -1,0 +1,123 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all ;
+ENTITY sseg IS
+    PORT (bcd          : IN STD_LOGIC_VECTOR(3 DOWNTO 0) ;
+            neg       : IN STD_LOGIC; --maybe remove for bcd[3]
+            leds       : OUT STD_LOGIC_VECTOR(1 TO 7)  ;
+            negative : OUT STD_LOGIC_VECTOR(1 TO 7) ) ;
+END sseg ;
+ARCHITECTURE Behavior OF sseg IS
+BEGIN
+    PROCESS (bcd)
+    BEGIN
+
+        IF neg = '0' THEN
+            negative <= "1111111";
+				IF bcd = "0000" THEN 
+					leds <= "0000001"; -- 0
+					
+				ELSIF bcd = "0001" THEN 
+					leds <= "1001111"; -- 1
+					
+				ELSIF bcd = "0010" THEN 
+					leds <= "0010010"; -- 2
+					
+				ELSIF bcd = "0011" THEN 
+					leds <= "0000110"; -- 3
+					
+				ELSIF bcd = "0100" THEN 
+					leds <= "1001100"; -- 4
+					
+				ELSIF bcd = "0101" THEN 
+					leds <= "0100100"; -- 5
+					
+				ELSIF bcd = "0110" THEN 
+					leds <= "0100000"; -- 6
+					
+				ELSIF bcd = "0111" THEN 
+					leds <= "0001111"; -- 7
+					
+				ELSIF bcd = "1000" THEN 
+					leds <= "0000000"; -- 8
+					
+				ELSIF bcd = "1001" THEN 
+					leds <= "0000100"; -- 9
+					
+				ELSIF bcd = "1010" THEN 
+					leds <= "0001000"; -- 10 (A)
+					
+				ELSIF bcd = "1011" THEN 
+					leds <= "1100000"; -- 11 (B)
+					
+				ELSIF bcd = "1100" THEN 
+					leds <= "0110001"; -- 12 (C)
+					
+				ELSIF bcd = "1101" THEN 
+					leds <= "1000010"; -- 13 (D)
+					
+				ELSIF bcd = "1110" THEN 
+					leds <= "0110000"; -- 14 (E)
+					
+				ELSIF bcd = "1111" THEN 
+					leds <= "0111000"; -- 15 (F)
+				END IF;	
+		  END IF;
+
+	 
+
+        IF neg = '1' THEN
+            negative <= "1111110";
+				IF bcd = "0000" THEN 
+					leds <= "0000001"; -- 0
+					
+				ELSIF bcd = "0001" THEN 
+					leds <= "1001111"; -- 1
+					
+				ELSIF bcd = "0010" THEN 
+					leds <= "0010010"; -- 2
+					
+				ELSIF bcd = "0011" THEN 
+					leds <= "0000110"; -- 3
+					
+				ELSIF bcd = "0100" THEN 
+					leds <= "1001100"; -- 4
+					
+				ELSIF bcd = "0101" THEN 
+					leds <= "0100100"; -- 5
+					
+				ELSIF bcd = "0110" THEN 
+					leds <= "0100000"; -- 6
+					
+				ELSIF bcd = "0111" THEN 
+					leds <= "0001111"; -- 7
+					
+				ELSIF bcd = "1000" THEN 
+					leds <= "0000000"; -- 8
+					
+				ELSIF bcd = "1001" THEN 
+					leds <= "0001111"; -- 9
+					
+				ELSIF bcd = "1010" THEN 
+					leds <= "0100000"; -- 10 (A)
+					
+				ELSIF bcd = "1011" THEN 
+					leds <= "0100100"; -- 11 (B)
+					
+				ELSIF bcd = "1100" THEN 
+					leds <= "1001100"; -- 12 (C)
+					
+				ELSIF bcd = "1101" THEN 
+					leds <= "0000110"; -- 13 (D)
+					
+				ELSIF bcd = "1110" THEN 
+					leds <= "0010010"; -- 14 (E)
+					
+				ELSIF bcd = "1111" THEN 
+					leds <= "1001111"; -- 15 (F)
+				END IF;	
+		  END IF;
+		   
+
+    END PROCESS;
+END Behavior;
+            

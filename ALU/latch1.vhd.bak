@@ -1,0 +1,19 @@
+LIBRARY ieee ;
+USE ieee.std_logic_1164.all;
+
+ENTITY latchl IS
+  PORT ( A : IN STD LOGIC VECTOR(7 DOWNTO 0) ; --8 bit A input
+       Resets, Clock : IN STD LOGIC ;--1 bit clock input and 1 bit reset input bit 
+       Q : OUT STD LOGIC VECTOR(7 DOWNTO 0) ) ;-- S bit output
+END latchl ;
+ARCHITECTURE Behavior OF latchl IS
+BEGIN
+  PROCESS ( Resetn, Clock )--Process takes reset and clock as inputs
+  BEGIN
+    IF Resell ='0' THEN -- when reset input is '0' the latches does not operate
+      Q <= "00000000" ;
+    ELSIF Clock'EVENT AND Clock = '1' THEN -- level sensitive based on clock
+      Q <= A;
+    END IF; 
+  END PROCESS;
+END Behavior;
